@@ -1,8 +1,8 @@
 /**
- *  * main - Entry point
- *   *
- *    * Return: Always 0 (Success)
- *     */
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 #include <stdio.h>
 #include <unistd.h>
 int main(void)
