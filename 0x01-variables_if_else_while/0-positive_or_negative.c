@@ -3,8 +3,8 @@
 #include<stdio.h>
 
 /**
- * main - entry point
- * Return: always return 0
+ * main - prints the size of various types
+ * Return: 0 if exited properly, non-zero otherwise
  */
 int main(void)
 {
