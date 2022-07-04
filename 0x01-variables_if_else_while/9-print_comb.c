@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of single-digit numbers.
+ * main - entry point.
  *
  * Return: Always 0.
  */
