@@ -5,10 +5,8 @@
 /**
  *  main - prints a random number and states whether it is positive, negative or zero
  *
- *  Return: 0 if exited properly, non-zero otherwise
- *
+ *  Return: Always 0
  */
-
 int main(void)
 {
 	int n;
