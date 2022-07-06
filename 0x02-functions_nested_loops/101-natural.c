@@ -5,7 +5,6 @@
  * @n: int
  */
 
-int main(void)
 void print_times_table(int n)
 {
 	int i, j, k;
