@@ -8,11 +8,11 @@
  * Return: largest number
  */
 
-int largest-number(int a, int b, int c)
+int largest_number(int a, int b, int c)
 {
 int largest;
 
-if (a >b)
+if (a > b)
 {
 if (a > c)
 {
@@ -34,3 +34,4 @@ largest = c;
 
 return (largest);
 }
+
