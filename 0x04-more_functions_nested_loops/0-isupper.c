@@ -6,10 +6,14 @@
  *
  * Return: 1(if upper)
  */
-int _isupper(int j)
+int _isupper(int c)
 {
-	if (j >= 'A' && j <= 'Z')
-		return (1);
-	else
-		return (0);
+	int j;
+
+	for (j = 'A'; j <= 'Z'; j++)
+	{
+		if (j == c)
+			return (1);
+	}
+	return (0);
 }
