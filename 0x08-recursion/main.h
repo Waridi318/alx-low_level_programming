@@ -11,3 +11,5 @@ int wildcmp(char *s1, char *s2);
 int sqr(int n, int x);
 int _length(char *s);
 int check_prime(int n, int resp);
+int last_index(char *s);
+int check(char *s, int start, int end, int pair);
