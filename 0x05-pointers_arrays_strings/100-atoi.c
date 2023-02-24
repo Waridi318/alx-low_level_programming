@@ -1,40 +1,20 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * _atoi - convert a string to an integer
- * @s: char
- * Return: stuff
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ * Return: integer
  */
-
 int _atoi(char *s)
 {
-	int c = 0;
-	unsigned int ni = 0;
-	int min = 1;
-	int isi = 0;
-
-	while (s[c])
+	int i;
+	
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[c] == 45)
+		if ((s[i] == 45 || s[i] == 43) && s[i + 1] >= 48 && s[i + 1] <= 57)
 		{
-			min *= -1;
+			printf("%c",s[i]);
 		}
-
-		while (s[c] >= 48 && s[c] <= 57)
-		{
-			isi = 1;
-			ni = (ni * 10) + (s[c] - '0');
-			c++;
-		}
-
-		if (isi == 1)
-		{
-			break;
-		}
-
-		c++;
 	}
-
-	ni *= min;
-	return (ni);
+	return (('0' + s[i]));
 }
