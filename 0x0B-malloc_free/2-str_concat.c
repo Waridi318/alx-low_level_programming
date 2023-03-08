@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 	int i, j;
 	char *ptr, *empty = "";
 
-	ptr = malloc(sizeof(*s1) + sizeof(*s2));
+	ptr = malloc(sizeof(*s1) + sizeof(*s2) - 1);
 
 	if (ptr == 0)
 		return (NULL);
