@@ -19,10 +19,5 @@ char *_strpbrk(char *s, char *accept)
 				return (s + i);
 		}
 	}
-	if (s[i] == '\0')
-	{
-		if (s[i] == accept[j - 1])
-			return (s + i);
-	}
 	return (0);
 }
