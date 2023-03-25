@@ -52,7 +52,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		newnode->next = temp;
 		newnode->n = n;
 	}
-	if (count > 2)
+	else
 	{
 		newnode->next = temp->next;
 		temp->next->prev = newnode;
