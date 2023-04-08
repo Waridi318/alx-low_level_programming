@@ -10,13 +10,13 @@ hash_node_t *node_create(const char *key, const char *value)
 	hash_node_t *item = malloc(sizeof(hash_node_t));
 
 	if (item == NULL)
-		return (NULL);
+		return (0);
 	item->key = strdup(key);
 	if (item->key == NULL)
-		return (NULL);
+		return (0);
 	item->value = strdup(value);
 	if (item->value == NULL)
-		return (NULL);
+		return (0);
 	item->next = NULL;
 
 	return (item);
