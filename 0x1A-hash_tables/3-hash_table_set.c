@@ -31,11 +31,8 @@ hash_node_t *node_create(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *item;
-	int index;
-
-	item = node_create(key, value);
-	index = key_index((const unsigned char *)key, ht->size);
+	hash_node_t *item = node_create(key, value);
+	int index = key_index((const unsigned char *)key, ht->size);
 
 	hash_node_t *current_item = ht->array[index];
 
