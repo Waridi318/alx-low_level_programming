@@ -48,6 +48,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			strcpy(ht->array[index]->value, value);
 			return (1);
 		}
+		else
+		{
+			ht->array[index] = item;
+			item->next = current_item;
+			current_item = item;
+			return (1);
+		}
 	}
 	return (0);
 }
