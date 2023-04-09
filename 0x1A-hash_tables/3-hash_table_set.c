@@ -32,28 +32,33 @@ hash_node_t *node_create(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *item = node_create(key, value);
-	int index = key_index((const unsigned char *)key, ht->size);
+	int index;
+	hash_node_t *current_item;
 
-	hash_node_t *current_item = ht->array[index];
+	if (ht != NULL)
+	{
+		index = key_index((const unsigned char *)key, ht->size);
+		current_item = ht->array[index];
 
-	if (current_item == NULL)
-	{
-		ht->array[index] = item;
-		return (1);
-	}
-	else
-	{
-		if (strcmp(current_item->key, key) == 0)
+		if (current_item == NULL)
 		{
-			strcpy(ht->array[index]->value, value);
+			ht->array[index] = item;
 			return (1);
 		}
 		else
 		{
-			ht->array[index] = item;
-			item->next = current_item;
-			current_item = item;
-			return (1);
+			if (strcmp(current_item->key, key) == 0)
+			{
+				strcpy(ht->array[index]->value, value);
+				return (1);
+			}
+			else
+			{
+				ht->array[index] = item;
+				item->next = current_item;
+				current_item = item;
+				return (1);
+			}
 		}
 	}
 	return (0);
